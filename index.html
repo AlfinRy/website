@@ -15,31 +15,31 @@
     <div class="h-screen w-screen bg-white flex flex-col">
       <a
         href="#top"
-        class="w-16 h-16 fixed right-0 bottom-0 m-8 rounded-full flex items-center justify-center text-2xl shadow-2xl bg-gray-100 motion-safe:animate-bounce">
+        class="w-16 h-16 fixed right-0 bottom-0 m-4 md:m-8 rounded-full flex items-center justify-center text-2xl shadow-2xl bg-gray-100 motion-safe:animate-bounce">
         <i class="las la-angle-up"></i>
       </a>
       <!-- Navbar -->
       <section
         id="top"
-        class="flex flex-row justify-between items-center p-16 py-8">
+        class="flex flex-row justify-between items-center p-5 md:p-16 py-8 bg-zinc-300">
         <img
           class="w-16"
           src="https://logodownload.org/wp-content/uploads/2020/06/valorant-logo-1.png"
           alt="Logo"/>
-        <div class="flex gap-6 text-xl">
+        <div class="hidden md:flex gap-6 text-xl">
           <a class="hover:font-bold" href="#home">Home</a>
           <a class="hover:font-bold" href="#about_me">About Me</a>
           <a class="hover:font-bold" href="">Portfolio</a>
           <a class="hover:font-bold" href="">Skill</a>
-          <a class="hover:font-bold" href="">Buku Tamu</a>
+          <a class="hover:font-bold" href="bukut.html">Buku Tamu</a>
         </div>
       </section>
       <!-- Body -->
       <div id="home" class="w-full flex flex-col">
         <section
-          class="h-full w-full flex items-center justify-center gap-32 py-20 bg-zinc-100">
+          class="h-full w-full flex flex-col md:flex-row items-center justify-center md:gap-32 gap-8 py-20 bg-zinc-400">
           <div class="text-5xl">
-            <div class="flex flex-col">
+            <div class="flex flex-col items-center md:items-start">
               <span class="font-bold">Student</span>
               <span>Alfin Reynaldi</span>
             </div>
@@ -52,29 +52,25 @@
           </div>
         </section>
         <!-- About Me -->
-        <section id="about_me" class="flex flex-col px-64 py-16 gap-8">
+        <section id="about_me" class="flex flex-col px-5 items-center md:items-start md:px-64 py-8 md:py-16 gap-8">
           <span class="text-4xl font-bold">About Me</span>
-          <div class="flex flex-row gap-8">
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
             <div
               class="w-48 aspect-square rounded-full shadow-2xl bg-center bg-cover"
               style="
                 background-image: url(https://netflix-news.atsit.in/id/wp-content/uploads/2021/12/kapanthe-book-of-boba-fettterjadi-di-timelinestar-wars.jpg);">
             </div>
-            <div class="w-fit flex flex-col">
+            <div class="w-fit flex flex-col items-center md:items-start">
               <span class="font-bold text-2xl">Alfin Reynaldi</span>
-              <span class="text-xl"
+              <span class="text-xl text-center md:text-left"
                 >Hello,this is my portfolio<br />Iam student and my hobby is
                 playing game <br />Thank you for visit my web</span>
-              <div class="flex flex-row w-24 h-24 items-center gap-4">
+              <div class="flex flex-row w-24 h-24 text-6xl items-center gap-2">
                 <a href="https://www.instagram.com/alfinry_/"
-                  ><img
-                    src="https://cdn-icons.flaticon.com/png/512/717/premium/717392.png?token=exp=1644566910~hmac=4791e5c279ecc191df1b051c031da025"
-                    alt="instagram"/>
+                  ><i class="lab la-instagram"></i>
                 </a>
                 <a href="https://github.com/AlfinRy"
-                  ><img
-                    src="https://cdn-icons-png.flaticon.com/512/733/733609.png"
-                    alt="github"/>
+                  ><i class="lab la-github"></i>
                 </a>
               </div>
             </div>
