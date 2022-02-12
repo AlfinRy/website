@@ -1,41 +1,64 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>buku tamu</title>
-</head>
-<body>
-    <h3><p align="center">BUKU TAMU</p></h3>
-    <form method="post" action="thanks.html">
-    <table align=center border="0" bordercolor=#fedabb
-    bgcolor=#ccffeb cellspacing=0 cellpadding=0 width="500"><tr>
-        <td width="8%">Nama</td>
-        <td width="4%">:</td>
-        <td width="88%"><input type="text" name="nama" size="20"></td>
-    </tr>
-    <tr>
-        <td width="8%">Alamat</td>
-        <td width="4%">:</td>
-        <td width="88%"><input type="text" name="asal" size="25"></td>
-    </tr>
-    <tr>
-        <td width="8%">Email</td>
-        <td width="4%">:</td>
-        <td width="88%"><input type="text" name="email" size="30"></td>
-    </tr>
-    <td>            
-            Kelamin: <br>
-        <input type="radio"
-        name="kelamin" value="pria">pria
-            <input type="radio"
-        name="kelamin" value="wanita">wanita
-            Hobi: <br>
-            <input type="checkbox"
-        name="hobi" value="tidur">tidur
-            <input type="checkbox"
-        name="hobi" value="bersepeda">bersepeda
-            <input type="checkbox"
-        name="hobi" value="lain">lainnya    
-            <input type="submit" value="kirim">
-        <input type="reset" value="ulangi">
-    </td>
-</body>
+  </head>
+  <body>
+    <div class="h-screen w-screen flex flex-col">
+      <section
+        id="top"
+        class="flex flex-row justify-between items-center p-16 py-8 bg-zinc-300">
+        <img
+          class="w-16"
+          src="https://logodownload.org/wp-content/uploads/2020/06/valorant-logo-1.png"
+          alt="Logo"/>
+        <div class="flex gap-6 text-xl">
+          <a class="hover:font-bold" href="index.html">Home</a>
+          <a class="hover:font-bold" href="index.html">About Me</a>
+          <a class="hover:font-bold" href="">Portfolio</a>
+          <a class="hover:font-bold" href="">Skill</a>
+          <a class="hover:font-bold" href="bukutamu.html">Buku Tamu</a>
+        </div>
+      </section>
+      <section class="h-full w-full bg-zinc-400">
+        <div>
+          <span class="flex flex-row justify-center m-8 text-4xl font-bold">Buku Tamu</span>
+        </div>
+        <form class="flex flex-col justify-center text-lg px-64 font-bold">
+          <table class="w-full">
+            <tr>
+              <td width="20%%">Nama</td>
+              <td><input type="text" name="nama" style="width: 40%;"></td>
+            </tr>
+            <tr>
+              <td>Alamat</td>
+              <td><input type="text" name="alamat" style="width: 40%;"></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td><input type="text" name="email" style="width: 40%;"></td>
+            </tr>
+            <td>
+              Kelamin:<br> 
+              <input type="radio" name="kelamin" value="pria">Pria <br>
+              <input type="radio" name="kelamin" value="wanita">Wanita <br>
+              
+              Hobi:<br>
+              <input type="checkbox" name="hobi" value="tidur">Tidur <br>
+              <input type="checkbox" name="hobi" value="olahraga">Olahraga <br>
+              Lainnya <br>
+              <input style="width: 60%;" type="text">
+              <button class="px-5 py-1 bg-white mt-2 mb-2 rounded-full font-bold" type="submit" value="kirim">Kirim</button><br>
+              <button class="px-5 py-1 bg-white rounded-full font-bold" type="reset" value="kirim">Reset</button><br>
+            </td>
+          </table>
+        </form>
+      </section>
+    </div>
+  </body>
 </html>
