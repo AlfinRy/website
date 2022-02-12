@@ -5,39 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        let show = false;
+        $("#dropdownButton").on("click", function () {
+          show = !show;
+          if (show == true) {
+            $("#dropdown").removeClass("hidden");
+          } else {
+            $("#dropdown").addClass("hidden");
+          }
+        });
+      });
+    </script>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link
       rel="stylesheet"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
     <title>Portfolio</title>
   </head>
   <body>
     <div class="h-screen w-screen bg-white flex flex-col">
       <a
         href="#top"
-        class="w-16 h-16 fixed right-0 bottom-0 m-4 md:m-8 rounded-full flex items-center justify-center text-2xl shadow-2xl bg-gray-100 motion-safe:animate-bounce">
+        class="w-16 h-16 fixed right-0 bottom-0 m-4 md:m-8 rounded-full flex items-center justify-center text-2xl shadow-2xl bg-gray-100 motion-safe:animate-bounce"
+      >
         <i class="las la-angle-up"></i>
       </a>
       <!-- Navbar -->
       <section
         id="top"
-        class="flex flex-row justify-between items-center p-5 md:p-16 py-8 bg-zinc-300">
+        class="flex flex-row justify-between items-center p-5 md:p-16 py-8 bg-zinc-300"
+      >
         <img
           class="w-16"
           src="https://logodownload.org/wp-content/uploads/2020/06/valorant-logo-1.png"
-          alt="Logo"/>
+          alt="Logo"
+        />
         <div class="hidden md:flex gap-6 text-xl">
           <a class="hover:font-bold" href="#home">Home</a>
           <a class="hover:font-bold" href="#about_me">About Me</a>
           <a class="hover:font-bold" href="">Portfolio</a>
           <a class="hover:font-bold" href="">Skill</a>
-          <a class="hover:font-bold" href="bukut.html">Buku Tamu</a>
+          <a class="hover:font-bold" href="bukutamu.html">Buku Tamu</a>
+        </div>
+        <button
+          id="dropdownButton"
+          data-dropdown-toggle="dropdown"
+          class="bg-black-300 hover:bg-black-400 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex focus:outline-0 outline-0 items-center md:hidden text-4xl"
+          type="button"
+        >
+          <i class="las la-bars"></i>
+        </button>
+        <div
+          id="dropdown"
+          class="hidden absolute top-20 right-8 z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+        >
+          <ul class="py-1" aria-labelledby="dropdownButton">
+            <li>
+              <a
+                href="#home"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about_me"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >About Me</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >Skill</a
+              >
+            </li>
+            <li>
+              <a
+                href="bukutamu.html"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >Buku Tamu</a
+              >
+            </li>
+          </ul>
         </div>
       </section>
       <!-- Body -->
       <div id="home" class="w-full flex flex-col">
         <section
-          class="h-full w-full flex flex-col md:flex-row items-center justify-center md:gap-32 gap-8 py-20 bg-zinc-400">
+          class="h-full w-full flex flex-col md:flex-row items-center justify-center md:gap-32 gap-8 py-20 bg-zinc-400"
+        >
           <div class="text-5xl">
             <div class="flex flex-col items-center md:items-start">
               <span class="font-bold">Student</span>
@@ -48,23 +121,31 @@
             <img
               class="w-80"
               src="https://avatanplus.com/files/resources/original/572a1652ccfb51547c673398.png"
-              alt="Profile"/>
+              alt="Profile"
+            />
           </div>
         </section>
         <!-- About Me -->
-        <section id="about_me" class="flex flex-col px-5 items-center md:items-start md:px-64 py-8 md:py-16 gap-8">
+        <section
+          id="about_me"
+          class="flex flex-col px-5 items-center md:items-start md:px-64 py-8 md:py-16 gap-8"
+        >
           <span class="text-4xl font-bold">About Me</span>
-          <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div
+            class="flex flex-col md:flex-row items-center md:items-start gap-8"
+          >
             <div
               class="w-48 aspect-square rounded-full shadow-2xl bg-center bg-cover"
               style="
-                background-image: url(https://netflix-news.atsit.in/id/wp-content/uploads/2021/12/kapanthe-book-of-boba-fettterjadi-di-timelinestar-wars.jpg);">
-            </div>
+                background-image: url(https://netflix-news.atsit.in/id/wp-content/uploads/2021/12/kapanthe-book-of-boba-fettterjadi-di-timelinestar-wars.jpg);
+              "
+            ></div>
             <div class="w-fit flex flex-col items-center md:items-start">
               <span class="font-bold text-2xl">Alfin Reynaldi</span>
               <span class="text-xl text-center md:text-left"
                 >Hello,this is my portfolio<br />Iam student and my hobby is
-                playing game <br />Thank you for visit my web</span>
+                playing game <br />Thank you for visit my web</span
+              >
               <div class="flex flex-row w-24 h-24 text-6xl items-center gap-2">
                 <a href="https://www.instagram.com/alfinry_/"
                   ><i class="lab la-instagram"></i>
